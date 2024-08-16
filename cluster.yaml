@@ -9,15 +9,16 @@ iam:
 
 addons:
   - name: aws-ebs-csi-driver
+    version: latest
     attachPolicyARNs:
       - arn:aws:iam::aws:policy/AmazonEKS_EBS_CSI_Driver_Policy
   - name: vpc-cni
     attachPolicyARNs:
       - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
   - name: coredns
-    version: "1.8.3"  # Specify the version you have tested with your applications
+    version: latest
   - name: kube-proxy
-    version: "1.18.3"  # Specify the version you have tested with your applications
+    version: latest
 
 nodeGroups:
   - name: ng-1
@@ -26,4 +27,3 @@ nodeGroups:
     iam:
       withAddonPolicies:
         ebs: true
-
