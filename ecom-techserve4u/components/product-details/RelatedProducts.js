@@ -1,0 +1,32 @@
+import React, { useState, useEffect } from 'react'
+import ProductCard from '../productCard'
+import Link from 'next/link'
+
+function RelatedProducts({ array, title }) {
+
+    return (
+        <div className="shop_by">
+
+            
+            <div className="section_heading">
+            <h5>{title}</h5>
+               
+            </div>
+
+
+            <div className="shop_by_content">
+                {
+                    array.length > 0 ? array.map((item, index) => {
+                        return (
+                            <ProductCard product={item} key={index} />
+                        )
+                    }) :
+                        <p>No products found</p>
+                }
+
+            </div>
+        </div>
+    )
+}
+
+export default RelatedProducts

@@ -1,0 +1,45 @@
+{
+  "payment": {
+    "cod": {
+      "isActive": true
+    },
+    "paypal": {
+      "isActive": true,
+      "clientId": "AfWKMgergQdNY7t0IjEc7gY3GEPNOVvgUgxNDbq361_DC60v6NkS7tDEeINBV615Ij7e6ua7jWjR3MlR",
+      "clientSecret": "EDJUO32qDiBE1vMgUeCj-h_yFRufJuYYxn-2D9DQdhf4aGdhxnZ0m2IxhVLtGdcimq--urmxel0XDQ1b",
+      "isSandbox": true
+    },
+    "venmo": {
+      "isActive": true,
+      "text": "demo text"
+    },
+    "cashApp": {
+      "isActive": true,
+      "text": "demo text"
+    },
+    "zelle": {
+      "isActive": true,
+      "text": "demo text"
+    }
+  },
+  "sliders": [
+    {
+      "key": 6774,
+      "title": "3",
+      "image": "https://res.cloudinary.com/shimul/image/upload/v1620488868/pNB2oWj6s-slide2.jpg",
+      "index": 0
+    },
+    {
+      "key": 3786,
+      "title": "2",
+      "image": "https://res.cloudinary.com/shimul/image/upload/v1620488865/5FugB38v6-slide1.jpg",
+      "index": 1
+    },
+    {
+      "key": 6113,
+      "title": "1",
+      "image": "https://res.cloudinary.com/shimul/image/upload/v1620488873/ZPp9hlV3T-slide3.jpg",
+      "index": 2
+    }
+  ]
+}

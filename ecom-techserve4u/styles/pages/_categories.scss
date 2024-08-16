@@ -1,0 +1,20 @@
+#categories_page{
+    .title{
+        margin: 20px 0;
+        color: $dark_gray;
+    }
+    a{
+        color: black;
+    }
+    li{
+        list-style-type: none;
+    }
+    .sub_cat{
+        margin-bottom: 10px;
+        font-weight: 500;
+        display: inline-block;
+    }
+    .subsub{
+        color:$light_gray_2 ;
+    }
+}

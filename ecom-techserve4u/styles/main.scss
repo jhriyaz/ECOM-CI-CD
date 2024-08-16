@@ -1,0 +1,34 @@
+//3rd party
+//@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'antd/dist/antd.css';
+
+
+//common
+@import "./common/variable";
+@import "./common/default";
+
+//components
+@import "./components/navbar";
+@import "./components/slickslider";
+@import "./components/mobilebottom";
+@import "./components/cartdrawer";
+@import "./components/productcard";
+@import "./components/brand-cat-card";
+@import "./components/userdrawer";
+@import "./components/catlist";
+@import "./components/addressmodal";
+@import "./components/review";
+@import "./components/invoice";
+
+//pages
+@import "pages/home";
+@import "pages/productdetails";
+@import "pages/checkout";
+@import "pages/profile";
+@import "pages/auth";
+@import "pages/search";
+@import "pages/orderdetails";
+@import "pages/campaings";
+@import "pages/campaign";
+@import "pages/categories";
+@import "pages/brands";

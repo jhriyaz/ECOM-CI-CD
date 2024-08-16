@@ -1,0 +1,46 @@
+#brands_page{
+    .shop_by {
+        .section_heading {
+          border-bottom: 1px solid $border_light;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+    
+          h5 {
+            font-size: 25px;
+            position: relative;
+            display: inline-block;
+    
+            @media (max-width:680px) {
+              font-size: 20px;
+            }
+    
+            @media (max-width:340px) {
+              font-size: 15px;
+            }
+    
+    
+            &::after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 2px;
+              background: $primary_color;
+              bottom: -10px;
+              left: 0;
+            }
+          }
+        }
+    
+        .shop_by_content {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+          gap: 2vw;
+    
+          @media (max-width:480px) {
+            grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+            gap: 3vw;
+          }
+        }
+      }
+}

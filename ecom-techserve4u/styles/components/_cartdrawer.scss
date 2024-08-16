@@ -1,0 +1,107 @@
+.MuiDrawer-paperAnchorRight {
+  width: 25vw;
+  padding: 10px;
+  .cart_sidebar_content {
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    .cart_header {
+      display: flex;
+      justify-content: space-between;
+      .fa-times {
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+    .cart_content {
+      margin-top: 10px;
+      .item_wrapper {
+        overflow-y: auto;
+        height: 70vh;
+
+        .cart_item {
+          &.unavailable{
+            opacity: 0.5;
+          }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0px;
+          border-bottom: 1px solid $separator;
+          .product_img {
+            flex: 2;
+            img {
+              height: 50px;
+              width: 50px;
+              object-fit: cover;
+            }
+          }
+          .product_name {
+            flex: 6;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            h5 {
+              font-size: 14px;
+              color: $light_gray_2;
+              text-transform: capitalize;
+            }
+            span {
+              color: $light_gray_2;
+              font-size: 13px;
+            }
+            .value {
+              margin-left: 5px;
+              color: $primary_color;
+            }
+          }
+          .action_button {
+            flex: 1;
+            cursor: pointer;
+            i {
+              &:hover {
+                color: $primary_hover_color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .cart_footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      .total {
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        color: $light_gray_2;
+      }
+      .cart_btn {
+        background: $primary_color;
+
+        color: white;
+      }
+      @media (max-width: 700px) {
+        bottom: 60px;
+      }
+      @media (max-width: 500px) {
+        bottom: 50px;
+      }
+      @media (max-width: 450px) {
+        bottom: 55px;
+      }
+
+    }
+  }
+  @media (max-width: 700px) {
+    width: 50vw;
+  }
+  @media (max-width: 400px) {
+    width: 75vw;
+  }
+  @media (max-width: 300px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,110 @@
+#campaign{
+    .wrapper{
+        margin-top: 20px;
+        .action_button{
+            margin: 10px 0;
+            button{
+                background: #7a7a7a;
+                padding: 10px 20px;
+                border-radius: 7px;
+                outline: auto;
+                color: white;
+                margin-right: 10px;
+                font-weight: 500;
+                &.active{
+                    background: $dark_gray;
+                }
+            }
+        }
+        .dividar{
+            border-bottom: 1px solid $separator;
+        }
+        .product_list{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+            gap: 2vw;
+      
+            @media (max-width:480px) {
+              grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+              gap: 3vw;
+            }
+        }
+        .categories{
+            display: flex;
+            margin: 10px 0;
+            flex-wrap: wrap;
+            .camp_cat_card{
+                border: 1px solid $light_gray;
+                height: 110px;
+                width: 110px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: $box_shadow;
+                margin-right: 20px;
+                overflow: hidden;
+                cursor: pointer;
+                border-radius: 5px;
+                @media (max-width: 700px) {
+                    height: 90px;
+                    width:90px;
+                  }
+                @media (max-width: 480px) {
+                    height: 80px;
+                    width:80px;
+                  }
+                span{
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 17px;
+                    color: $dark_gray;
+                    @media (max-width: 700px) {
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
+                      @media (max-width: 480px) {
+                        font-size: 12px;
+                        font-weight: 400;
+                      }
+                }
+                &:hover span{
+                    color: $primary_color;
+                    
+                }
+                &:hover{
+                    border: 1px solid $primary_color;
+                }
+
+                &.active{
+                    border: 1px solid $primary_color;
+                    span{
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+       
+    }
+    .header_info{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: $white;
+        box-shadow: $box_shadow;
+        align-items: center;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        .total{
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .sort{
+          .label{
+            font-weight: 500;
+          font-size: 16px;
+          margin-right: 10px;
+          }
+        }
+      }
+}

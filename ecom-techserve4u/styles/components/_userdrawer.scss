@@ -1,0 +1,140 @@
+.MuiDrawer-paperAnchorLeft {
+    width: 20vw;
+
+    .user_drawer_header {
+        background-color: $primary_color;
+        padding: 20px 20px;
+
+        .avatar {
+            display: flex;
+
+            align-items: center;
+
+            img {
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .name_mobile{
+                color: $white;
+                margin-left: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-top: 5px;
+                    margin-bottom: 4px;
+                    @media (max-width:530px) {
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                }
+                span{
+                    font-size: 13px;
+                }
+            }
+
+           
+        }
+
+        .auth_button {
+            margin: 10px 0;
+
+            a {
+                color: $white;
+                font-weight: 300;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+
+            }
+
+            .login {
+                padding: 0 15px 0 0;
+                border-right: 1px solid $separator;
+            }
+
+            .register {
+                padding: 0 0 0 15px;
+            }
+            .logout{
+                font-weight: 500;
+            cursor: pointer;
+            color: $white;
+            padding: 0 10px;
+            }
+        }
+    }
+
+    .user_drawer_container {
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+       
+        .list_content{
+            padding: 20px 20px 0 20px;
+            .list_item{
+                list-style-type:none ;
+                .list_item_link{
+                    i{
+                        font-size: 18px;
+                        color: $light_gray_2;
+                        padding: 0 10px;
+                        @media (max-width:530px) {
+                            font-size: 15px;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        color: $light_gray_2;
+                        padding: 0 10px;
+                        display: inline-block;
+                        @media (max-width:530px) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                &:hover .list_item_link i{
+                    color: $primary_hover_color;
+                }
+            }
+            @media (max-width:530px) {
+                padding: 10px;
+            }
+        }
+    }
+    @media (max-width:1120px) {
+        width: 25vw;
+    }
+    @media (max-width:950px) {
+        width: 30vw;
+    }
+    @media (max-width:700px) {
+        width: 35vw;
+    }
+    @media (max-width:600px) {
+        width: 40vw;
+    }
+    @media (max-width:530px) {
+        width: 50vw;
+    }
+}

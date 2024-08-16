@@ -1,0 +1,100 @@
+#search {
+  .header_info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: $white;
+    box-shadow: $box_shadow;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    .total{
+      font-weight: 500;
+      font-size: 16px;
+      @media (max-width: 500px) {
+        font-size: 14px;
+        font-weight: 400;
+      } 
+    }
+    .sort{
+      .label{
+        font-weight: 500;
+      font-size: 16px;
+      margin-right: 10px;
+      @media (max-width: 500px) {
+        display: none;
+      } 
+      }
+    }
+    .filter_icon{
+      display: none;
+      i{
+        font-size: 20px;
+      }
+      @media (max-width: 920px) {
+       display: inline-block;
+      }
+    }
+  }
+  .shop_by_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    gap: 2vw;
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+      gap: 3vw;
+    }
+  }
+ 
+}
+.filtersection {
+  border: 1px solid $border_light;
+  box-shadow: $box_shadow;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  background-color: $white;
+  .filtertitle {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid $separator;
+    font-weight: 500;
+    color: rgba($color: $dark_gray, $alpha: 0.8);
+    font-size: 16px;
+  }
+  .filtercontent {
+    padding: 10px;
+  }
+  .filterprice {
+    span{
+      font-weight: 500;
+    }
+    .priceinput {
+      width: 100%;
+      max-width: 80px;
+      min-width: 0px;
+      height: 32px;
+      padding: 0px 12px;
+      appearance: none;
+      background-color: rgb(245, 245, 250);
+      font-size: 12px;
+      border-radius: 4px;
+      outline: none;
+      border: 1px solid $primary_color;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+      
+    }
+  }
+}
