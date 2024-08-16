@@ -1,5 +1,6 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
+
 metadata:
   name: jahid
   region: us-east-1
@@ -9,21 +10,25 @@ iam:
 
 addons:
   - name: aws-ebs-csi-driver
-    version: latest
-    attachPolicyARNs:
-      - arn:aws:iam::aws:policy/AmazonEKS_EBS_CSI_Driver_Policy
+    version: "latest"
+    wellKnownPolicies:      # add IAM and service account
+      ebsCSIController: true
   - name: vpc-cni
+    version: "latest"
     attachPolicyARNs:
       - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
   - name: coredns
-    version: latest
+    version: "latest"  # Specify a fixed version if you require stability.
   - name: kube-proxy
-    version: latest
+    version: "latest"  # Specify a fixed version if you require stability.
 
-nodeGroups:
-  - name: ng-1
+managedNodeGroups:
+  - name: mg-1
     instanceType: t2.medium
     desiredCapacity: 4
+    minSize: 2
+    maxSize: 5
+    volumeSize: 20  # You can adjust the disk size as needed
     iam:
       withAddonPolicies:
         ebs: true
