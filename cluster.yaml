@@ -1,0 +1,29 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: jahid
+  region: us-east-1
+
+iam:
+  withOIDC: true
+
+addons:
+  - name: aws-ebs-csi-driver
+    attachPolicyARNs:
+      - arn:aws:iam::aws:policy/AmazonEKS_EBS_CSI_Driver_Policy
+  - name: vpc-cni
+    attachPolicyARNs:
+      - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+  - name: coredns
+    version: "1.8.3"  # Specify the version you have tested with your applications
+  - name: kube-proxy
+    version: "1.18.3"  # Specify the version you have tested with your applications
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t2.medium
+    desiredCapacity: 4
+    iam:
+      withAddonPolicies:
+        ebs: true
+
